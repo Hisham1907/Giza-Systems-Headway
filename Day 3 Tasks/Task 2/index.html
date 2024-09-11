@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+<style>
+    body {
+        font-family: sans-serif;
+        color: #333;
+    }
+
+    .container {
+        width: 70%;
+        margin: auto;
+    }
+
+    form {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .form-left {
+        width: 50%;
+        border-right: 3px solid #e5e7eb;
+        padding-right: 2rem;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .input-field {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+
+    .flex-column {
+        flex-direction: column;
+        gap: .6rem;
+    }
+
+    .form-right .input-field.flex-column {
+        margin-bottom: 2rem;
+    }
+
+    .input-field label {
+        font-weight: 600;
+    }
+
+    .input-field input,
+    .input-field textarea {
+        outline: none;
+        font-size: .9rem;
+        border: 3px solid #c8cbcc;
+        padding: .6rem;
+    }
+
+    .input-field textarea {
+        resize: none;
+
+    }
+
+    .input-field:has(.name-fields) input {
+        width: 30%;
+    }
+
+    .name-fields {
+        display: flex;
+        justify-content: end;
+        gap: .5rem;
+    }
+
+    .booth-types {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+    label{
+        font-size: 1.1rem;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h2 class="title">Exhibitor Registration</h2>
+        <form action="index.html" method="" enctype="application/x-www-form-urlencoded">
+            <div class="form-left">
+                <div class="input-field">
+                    <label for="prefix">Prefix</label>
+                    <input type="text" name="prefix" id="prefix" required max="10">
+                </div>
+                <div class="input-field">
+                    <label>Name</label>
+                    <div class="name-fields">
+                        <input type="text" name="firstName" placeholder="First Name" required min="3" max="10">
+                        <input type="text" name="lastName" placeholder="Last Name" required min="3" max="10">
+                    </div>
+                </div>
+                <div class="input-field">
+                    <label for="preferredPronouns">preferred Pronouns</label>
+                    <input type="text" name="preferredPronouns" id="preferredPronouns" required max="10">
+                </div>
+                <div class="input-field">
+                    <label for="email"> Email</label>
+                    <input type="email" name="email" id="email" placeholder="sample@example.com" required
+                        pattern="/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/">
+                </div>
+                <div class="input-field">
+                    <label for="workPhone">Work Phone</label>
+                    <input type="tel" name="workPhone" id="workPhone" required
+                        pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/">
+                </div>
+                <div class="input-field">
+                    <label for="cellPhone">Cell Phone</label>
+                    <input type="tel" name="cellPhone" id="cellPhone" required
+                        pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/">
+                </div>
+                <div class="input-field">
+                    <label for="jobTitle">Job Title</label>
+                    <input type="text" name="jobTitle" id="jobTitle" required>
+                </div>
+                <div class="input-field">
+                    <label for="company">Company</label>
+                    <input type="text" name="company" id="company" required>
+                </div>
+                <div class="input-field flex-column">
+                    <label for="fullBusinessAddress">full Business Address</label>
+                    <input type="text" name="fullBusinessAddress" id="fullBusinessAddress" required>
+                </div>
+                <div class="input-field flex-column">
+                    <label for="companyWebsite">Company Website</label>
+                    <input type="url" name="companyWebsite" id="companyWebsite" pattern="/^(http|https):\/\/[^ " ]+$/"
+                        required>
+                </div>
+            </div>
+            <div class="form-right">
+                <div class="input-field flex-column">
+                    <label for="companyDescription">Company Description</label>
+                    <textarea name="companyDescription" id="companyDescription" required></textarea>
+                </div>
+                <div class="input-field flex-column">
+                    <label for="product/servicesToExhibit">Product/Services To Exhibit</label>
+                    <textarea name="product/servicesToExhibit" id="product/servicesToExhibit" required></textarea>
+                </div>
+                <div class="input-field flex-column">
+                    <label> What type of booth do you like?</label>
+                    <div class="booth-types">
+                        <label><input type="radio" name="boothType" value="inpersonBoothOnly">In-person booth
+                            only</label>
+                        <label><input type="radio" name="boothType" value='virtualBoothOnly'>Virtual booth only</label>
+                        <label><input type="radio" name="boothType" value='virtual&InpersonBooth'>Virtual & In-person
+                            booth</label>
+
+                    </div>
+                </div>
+                <div class="input-field flex-column">
+                    <label for="listYourStaff">list Your Staff(name,email,phone)</label>
+                    <textarea name="listYourStaff" id="listYourStaff" required></textarea>
+                </div>
+                <div class="input-field flex-column">
+                    <label for="competitorsYouDontWantBeNear">Competitors you don't want be near</label>
+                    <textarea name="competitorsYouDontWantBeNear" id="competitorsYouDontWantBeNear" required></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
