@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap");
+/* General Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Heebo", system-ui;
+  color: #21243d;
+  scroll-behavior: smooth;
+}
+.container {
+  margin: auto;
+  width: 75%;
+}
+.d-flex {
+  display: flex;
+}
+.mb-16 {
+  margin-bottom: 16px;
+}
+/* Navbar */
+
+nav {
+  margin: auto;
+  width: 90%;
+  padding: 16px;
+}
+nav img {
+  display: none;
+}
+nav ul {
+  list-style: none;
+  gap: 20px;
+  justify-content: end;
+}
+nav ul a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 29.38px;
+  transition: 0.3s all;
+}
+nav ul a:hover {
+  color: #ff6464;
+}
+/* Header */
+header {
+  padding: 32px 0;
+}
+header.hero .hero-content {
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+.hero-text h1 {
+  line-height: 60px;
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.hero-text p {
+  line-height: 23.5px;
+  font-size: 16px;
+  max-width: 500px;
+  margin-bottom: 24px;
+}
+.hero-text button {
+  background-color: #ff6464;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 2px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29.38px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.hero-text button:hover {
+  background-color: #ee3b3b;
+  transform: translateY(-3px);
+}
+/* ======================================================== */
+/* Posts Section */
+
+.posts-section {
+  background-color: #edf7fa;
+  padding: 32px 0;
+}
+.section-head {
+  justify-content: space-between;
+  font-size: 22px;
+}
+.section-head a {
+  text-decoration: none;
+  color: #00a8cc;
+  font-size: 16px;
+}
+.posts {
+  gap: 16px;
+  flex: 1;
+}
+.posts .post {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.posts .post:hover {
+  transition: 0.3s all;
+  box-shadow: 0 0 0;
+}
+.post-info span:nth-child(2) {
+  margin: 0 16px;
+}
+/* ======================================================== */
+/* Featured Section */
+.featured-section {
+  padding: 32px 0;
+  margin-bottom: 48px;
+}
+.works {
+  flex-direction: column;
+  gap: 44px;
+}
+.work {
+  align-items: start;
+  flex: 1;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.work h2 {
+  font-size: 30px;
+  line-height: 44.06px;
+  margin-bottom: 0.8rem;
+}
+.work-info {
+  margin-bottom: 1.2rem;
+}
+.work-info span:nth-child(1) {
+  background-color: #142850;
+  color: #fff;
+  font-weight: 900;
+  font-size: 14px;
+  padding: 3px 10px;
+  border-radius: 16px;
+  margin-right: 1rem;
+}
+.work-info span:nth-child(2) {
+  color: #8695a4;
+  font-size: 16px;
+}
+/* ======================================================== */
+/* Footer */
+footer {
+  padding: 32px 0;
+  text-align: center;
+  font-size: 14px;
+}
+.footer-logos {
+  width: 20%;
+  margin: auto;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+/* ======================================================== */
+/* Media Queres */
+@media (max-width: 600px) {
+  .container {
+    margin: auto;
+    width: 95%;
+    padding: 0 32px;
+  }
+  nav .d-flex {
+    display: none;
+  }
+  nav {
+    display: flex;
+    justify-content: end;
+  }
+  nav img {
+    display: block;
+    cursor: pointer;
+  }
+  header {
+    padding: 32px;
+    text-align: center;
+  }
+  .hero-text h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  header .d-flex {
+    flex-direction: column;
+    gap: 16px;
+  }
+  header .hero-content .hero-text {
+    order: 2;
+  }
+  header .hero-content .hero-img {
+    order: 1;
+  }
+  /* //////////// */
+  .posts-section .posts.d-flex {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .section-head {
+    justify-content: center;
+  }
+  .section-head a {
+    display: none;
+  }
+  /* /////////// */
+  .featured-section .section-head {
+    text-align: center;
+  }
+  .featured-section .d-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-logos {
+    width: 60%;
+  }
+}
+/* ===================== The End ========================== */
