@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap");
+/* General Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Heebo", system-ui;
+  color: #21243d;
+  scroll-behavior: smooth;
+}
+.container {
+  width: 90%;
+}
+/* ======================================================================== */
+/* Utility Classes */
+.d-flex {
+  display: flex;
+}
+.m-auto {
+  margin: auto;
+}
+.mb-24 {
+  margin-bottom: 2.4rem;
+}
+.w-100 {
+  width: 100%;
+}
+.text-black {
+  color: #000000;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fs-16 {
+  font-size: 1.6rem;
+}
+.line-height-6 {
+  line-height: 6rem;
+}
+.p-styles {
+  line-height: 23.5px;
+  min-width: 33.9rem;
+}
+/* ======================================================================== */
+/* Navbar */
+header {
+  text-align: right;
+}
+nav {
+  padding: 2rem 1.8rem 4.4rem;
+  margin-bottom: 3.2rem;
+}
+nav img {
+  cursor: pointer;
+}
+nav ul.d-flex {
+  display: none;
+}
+/* =========================================================================== */
+/* Hero Section */
+h1 {
+  font-size: 3rem;
+  line-height: 4rem;
+  min-width: 33.9rem;
+}
+.article-info {
+  align-items: start;
+  gap: 0.8rem;
+}
+.article-info span {
+  font-size: 1.8rem;
+}
+.article-info span:nth-child(1) {
+  background-color: #ff7c7c;
+  color: #fff;
+  font-weight: 900;
+  padding: 0.1rem 1rem;
+  border-radius: 1.6rem;
+}
+.article-info span:nth-child(2) {
+  line-height: 26.44px;
+}
+/* =========================================================================== */
+/* Work Section */
+#work h2 {
+  font-size: 2.6rem;
+}
+#work h4 {
+  font-size: 2rem;
+}
+
+/* =========================================================================== */
+/* Footer */
+footer {
+  padding: 3.2rem 0;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 20.56px;
+}
+.footer-logos {
+  width: 60%;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+}
+/* =========================================================================== */
+/* Media Queres */
+@media (min-width: 768px) {
+  .container {
+    max-width: 68.1rem;
+  }
+  .mb-24 {
+    margin-bottom: 3rem;
+  }
+  /* Navbar */
+  nav img {
+    display: none;
+  }
+  nav ul.d-flex {
+    display: flex;
+  }
+  nav {
+    padding: 2.7rem 6rem;
+  }
+  nav ul {
+    list-style: none;
+    gap: 2rem;
+    justify-content: end;
+  }
+  nav ul a {
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 29.38px;
+    transition: 0.3s all;
+  }
+  nav ul a:hover {
+    color: #ff6464;
+  }
+  .footer-logos {
+    width: 20%;
+  }
+  h1 {
+    font-size: 3.4rem;
+    line-height: 49.94px;
+    min-width: 50.6rem;
+  }
+  #hero p {
+    min-width: 68.1rem;
+  }
+  #work h2 {
+    font-size: 3rem;
+  }
+  #work h4 {
+    font-size: 2.4rem;
+  }
+  #work p {
+    min-width: 67.7rem;
+  }
+}
+/* =============================The End BYE :-D ============================== */
